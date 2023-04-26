@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style type="text/css">
+*
+{
+	text-align:center;
+}
+h1,h5
+{
+	font-family:algerian;
+}
+h1,h2,h3
+{
+	color:#3333FF;
+}
+</style>
+<script src="C:\taffydb-master\taffydb-master\taffy.js"></script>
+<script type="text/javascript">
+function validate()
+{
+	if( document.myForm.un.value=="")
+	{
+		alert( "Please provide your Username!" );
+		document.myForm.un.focus() ;
+		return false;
+	}
+	var username=document.myForm.un.value;
+	if( document.myForm.pwd.value=="")
+	{
+		alert( "Please provide your password!" );
+		document.myForm.pwd.focus() ;
+		return false;
+	}
+	var password=document.myForm.pwd.value;
+	alert(book({Username:username}).first().Password);
+	if((book({Username:username}).first().Password)==password)
+	{
+		alert(book({Username:username}).first().Password);
+		return true;
+	}
+	alert("Invalid Username or Password");
+	document.myForm.pwd.focus();
+	return false;
+}
+</script>
+<title>Log In Page</title>
+</head>
+<body>
+<div style="color:black">
+<h1 align="center">BOOK TRADER ONLINE</h1>
+<h5 align="center">THE REPOSITORY OF WORLD BOOKS</h5>
+<hr />
+<p align="center"><i>FIND OUR NEWEST FEATURES EXCLUSIVE HERE</i></p>
+<marquee direction="left">You can upload,download e-books anytime, anywhere from our website.For more info contact us</marquee>
+<h2>LOG IN PAGE</h2>
+<form action="trade.html" name="myForm" onsubmit="return(validate());">
+USERNAME:<input type="text" name="un"/>
+<br />
+<br />
+PASSWORD:<input type="password" name="pwd"/>
+<br />
+<br />
+<p align="center" >
+<input type="submit" value="Submit" />
+<a href="log.html"><b>RESET</a></b>
+</p>
+<p align="center">Create a new account? <a href="sign.html">signup</a></p>
+</form>
+</div>
+<img src="u.jpg" alt="img" width=1000" align="center" height="500" />
+</body>
+</html>

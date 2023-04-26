@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sign Up Page</title>
+<style>
+h1,h5
+{
+	font-family:algerian;
+}
+*
+{
+	font-family:georgia;
+	text-align:center;
+}
+h1,h2,h3,h4,h5,h6
+{
+	color:#3333FF;
+}
+h1
+{
+	border-style:double;
+}
+</style>
+<script src="C:\taffydb-master\taffydb-master\taffy.js"></script>
+<script>
+var book = TAFFY({Name:"A",Username:"a",Age:"5",Email:"abc@gmail.com",Designation:"None",Password:"-"});
+</script>
+<script type="text/javascript">
+function validate()
+{
+	if( document.myForm.age.value>100|| document.myForm.age.value<0)
+	{
+		alert( "Please provide your age!" );
+		document.myForm.age.focus() ;
+		return false;
+	}
+	var age=document.myForm.age.value;
+	if( document.myForm.name.value=="name")
+	{
+		alert( "Please provide your name!" );
+		document.myForm.name.focus() ;
+		return false;
+	}
+	var name=document.myForm.name.value;
+	if( document.myForm.un.value=="")
+	{
+		alert( "Please provide your username!" );
+		document.myForm.un.focus() ;
+		return false;
+	}
+	var username=document.myForm.un.value;
+	var e = document.getElementById("haha");
+	var strUser = e.options[e.selectedIndex].value;
+	var desg;
+	if(strUser==0)
+	{
+		alert("Please select your designation");
+		return false;
+	}
+	if(strUser==1)
+	{
+		desg="Student";
+	}
+	if(strUser==2)
+	{
+		desg="Professor";
+	}
+	if(strUser==3)
+	{
+		desg="Writer";
+	}
+	if(strUser==4)
+	{
+		desg="Others";
+	}
+	var email;
+	e = document.getElementById("hihi");
+	strUser = e.options[e.selectedIndex].value;
+	if(strUser==0)
+	{
+		alert("Please select your state");
+		return false;
+	}
+	var emailID = document.myForm.email.value;
+	atpos = emailID.indexOf("@");
+	dotpos = emailID.lastIndexOf(".");
+	if (atpos < 1 || ( dotpos - atpos < 2 ))
+	{
+		alert("Please enter correct email ID")
+		document.myForm.email.focus() ;
+		return false;
+	}
+	email=document.myForm.email.value;
+	var pwd;
+	if( document.myForm.pw1.value!=document.myForm.pw2.value)
+	{
+		alert( "Passwords donot match" );
+		document.myForm.pw1.focus() ;
+		return false;
+	}
+	if( document.myForm.pw1.length<8)
+	{
+		alert( "Password size should be alteast 8" );
+		document.myForm.pw1.focus() ;
+		return false;
+	}
+	pwd=document.myForm.pw1.value;
+	book.insert({Name:name,Username:username,Age:age,Email:email,Designation:desg,Password:pwd});
+	alert(book({Name:"Sri Ram"}).first().Designation);
+	return true;
+}
+</script>
+</head>
+<body backgroundh="p.jpg">
+<div style="color:black">
+<h1>BOOK TRADER ONLINE</h1>
+<h5>THE REPOSITORY OF WORLD BOOKS</h5>
+<hr />
+<p align="left"><i>FIND OUR NEWEST FEATURES EXCLUSIVE HERE</i></p>
+<marquee direction="left">You can upload,download e-books anytime, anywhere from our website.For more info contact us</marquee>
+<h2 align="center">SIGN UP PAGE</h2>
+<img src="d.jpg" alt="img" width=500" align="center" height="300" />
+<br />
+<br />
+<form action="trade.html" name="myForm" onsubmit="return(validate());">
+NAME:<input type="text" value="name" name="name" />
+AGE:<input type="text" name="age"/>
+<br />
+<h3>Select your areas of interest</h3>
+<table border="5" align="center" cellpadding="5" width="150" cellspacing="5">
+<tr>
+<td>
+<input type="checkbox" value="on" />Mathematics
+<br />
+</td>
+</tr>
+<tr>
+<td>
+<input type="checkbox" value="on" />Physics
+<br />
+</td>
+</tr>
+<tr>
+<td>
+<input type="checkbox" value="on" />Biology
+<br />
+</td>
+</tr>
+<tr>
+<td>
+<input type="checkbox" value="on" />Sociology
+<br />
+</td>
+</tr>
+<tr>
+<td>
+<input type="checkbox" value="on" />Literature
+<br />
+</td>
+</tr>
+<tr>
+<td>
+<input type="checkbox" value="on" />Media
+<br />
+</td>
+</tr>
+<tr>
+<td>
+<input type="checkbox" value="on" />System
+<br />
+</td>
+</tr>
+<tr>
+<td>
+<input type="checkbox" value="on" />Medicine
+<br />
+</td>
+</tr>
+<tr>
+<td>
+<input type="checkbox" value="on" />Sports
+<br />
+</td>
+</tr>
+<tr>
+<td>
+<input type="checkbox" value="on" />Economics
+<br />
+</td>
+</tr>
+<tr>
+<td>
+<input type="checkbox" value="on" />Geography
+<br />
+</td>
+</tr>
+</table>
+<br />
+USERID:<input type="text" name="un"/>
+<h3>Select your state</h3>
+<select name="drop1" id="hihi">
+<option value=0>Select State</option>
+<option value=1>Tamil Nadu</option>
+<option value=2>Andhra Pradesh</option>
+<option value=3>Arunachal Pradesh</option>
+<option value=4>Bihar</option>
+<option value=5>Chattisgarh</option>
+<option value=6>Kerela</option>
+<option value=7>Karnataka</option>
+<option value=8>Maharashtra</option>
+<option value=9>Madhya Pradesh</option>
+<option value=10>Gujarat</option>
+<option value=11>Uttar Pradesh</option>
+<option value=12>Punjab</option>
+<option value=13>Telengana</option>
+<option value=14>Orissa</option>
+<option value=15>West Bengal</option>
+</select>
+<br />
+<br />
+E-mail:<input type="text" name="email" />
+<br />
+<h3>Select your Designation</h3>
+<select name="drop2" id="haha" >
+<option value="0">Select Designation</option>
+<option value="1">Student</option>
+<option value="2">Professor</option>
+<option value="3">Writer</option>
+<option value="4">Others</option>
+</select>
+<br />
+<br />
+PASSWORD:<input type="password" name="pw1"/>
+<br />
+<br />
+PASSWORD:<input type="password" name="pw2"/>
+<br />
+<p align="center">
+<input type="submit" value="Submit" />
+<a href="sign.html"><b>RESET</a></b>
+</p>
+</form>
+</div>
+</body>
+</html>
+
