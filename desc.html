@@ -4,7 +4,8 @@
 <style>
 /* Style the tab */
 *{
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: medium;
 }
 .tab {
   overflow: hidden;
@@ -62,36 +63,99 @@
   // Show the current tab, and add an "active" class to the button that opened the tab
   document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " active";
-}
+  }
 </script>
+<script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
 </head>
 <body>
 
     <div class="tab">
-        <button class="tablinks" id="Default" onclick="openCity(event, 'About')">About Me</button>
-        <button class="tablinks" onclick="openCity(event, 'Paris')">At UIUC</button>
-        <button class="tablinks" onclick="openCity(event, 'Paris')">At Informatica</button>
-        <button class="tablinks" onclick="openCity(event, 'Paris')">At SASTRA</button>
+        <button class="tablinks" id = "Default" onclick="openCity(event, 'About')">About Me</button>
+        <button class="tablinks" onclick="openCity(event, 'Uiuc')">At UIUC</button>
+        <button class="tablinks" onclick="openCity(event, 'Informatica')">At Informatica</button>
+        <button class="tablinks" onclick="openCity(event, 'Sastra')">At SASTRA</button>
         <button class="tablinks" onclick="openCity(event, 'Projects')">Projects</button>
         <button class="tablinks" onclick="openCity(event, 'Publications')">Publications</button>
         <button class="tablinks" onclick="openCity(event, 'Appointments')">Current Appointments</button>
-        <button class="tablinks" onclick="openCity(event, 'Contact')">Contact Me</button>
+        <!--<button class="tablinks" onclick="openCity(event, 'Contact')">Contact Me</button>-->
       </div>
+
+      <!--********************************************ABOUT*************************************************************-->
 
       <div id="About" class="tabcontent">
         <h3>About Me</h3>
         <p align="justify">As a kid not too far from an international port, my initial fancy was around the field of mechanics and large-scale automobiles. For instance, my hydraulic lift prototype in school won acclaim in a science-exposition. The benefits associated with that domain in the transformation of human work were innumerable. I knew about programming back then, but my viewpoint was limited to juxtaposing it with mechanical automations – as in, it also helps automate what humans do (just do and not think). Later in higher secondary school, I was introduced to machine learning, where machines were taught to observe, think, try, re-think, and then do. This broke all limits I thought I had set for machines in facilitating human living. In order to utilize the tremendous space for innovation this concept presents, my focus gravitated towards the world of computers. I started believing in the power of computer science and wanted to set my career in its direction.</p>
       </div>
       
-      <div id="Paris" class="tabcontent">
-        <h3>Paris</h3>
-        <p>Paris is the capital of France.</p>
-      </div>
+      <!--******************************************UIUC*****************************************************************-->
+
+      <div id="Uiuc" class="tabcontent">
+        <h5>Degree</h5>
+          <ul><li>Master's Degree; Computer Science</li>
+          <li>GPA - 4.0/4.0</li></ul>
+        <h5>Period of Study</h5>
+          <ul><li>Aug 2022 - Dec 2023</li></ul>
+        <h5>Coursework</h5>
+        <ul>
+          <li><i>Individual Study</i> - Large Language Models (BERT, GPT) for code generation, completion, fault localization</li>
+          <li><i>Advanced Information Retrieval</i> - Estimation Maximization, Topic Modelling, Conversational/Interactive IR  </li>
+          <li><i>ML for Software Engineering</i> - Deep learning models to aid in software engineering tasks (agile), Model tasks using ChatGPT API</li>
+          <li><i>Natural Language Processing</i> - Dialogue Systems, Question Answering, Machine Translation, Masked Language Modelling</li>
+          <li><i>Text Information Systems</i> - Search Engines (Design & Evaluation), Text Mining, PLSA, Hidden Markov Models</li>
+          <li><i>Applied Machine Learning</i> - Image smoothing, COnvolutional Neural Networks, Recurrent Neural Networks</li>
+          <li><i>Cloud Computing Applications</i> - Data storage, Virtualization, Cloud Analytics, Load Balancing, Hands-on tasks with cloud offerings</li>
+          <li><i>Computer Education Research</i> - Cognitivism, Design of Knowledge-in-Pieces, Transfer of Learning, Theoretical Constructivism</li>
+        </ul>
+        <h5>Activities and Memberships</h5>
+        <ul>
+        <li>Member of the Tau Beta Pi Honorary Engineering Soceity</li>
+        <li>Completed the IRB training to deal with experiments involving human behavior and subjects</li>
+        <li>Research study on Large Language Models (LLM) with Prof. Reyhan's lab</li>
+        </div>
       
-      <div id="Tokyo" class="tabcontent">
-        <h3>Tokyo</h3>
-        <p>Tokyo is the capital of Japan.</p>
+      <!--*******************************************Informatica*************************************************************-->
+
+      <div id="Informatica" class="tabcontent">
+        <h5>Period of Work</h5>
+        <ul><li>Jan 2019 - Aug 2022 (3 years, 8 months)</li></ul>
+        <h5>Roles and Responsibilities</h5>
+          <ul>
+          <li>GPA - 4.0/4.0</li></ul>
+        <h5>Period of Study</h5>
+          <ul><li></li></ul>
       </div>
+
+      <!--*************************************Sastra*******************************************************************-->
+      
+      <div id="Sastra" class="tabcontent">
+        <h5>Degree</h5>
+        <ul>
+        <li>Bachelor's Degree with Honors; Computer Science and Engineering <br/>
+        </li><li>GPA - 9.6/10.0 (Ranked #1 in a class of 250)
+        </li></ul>
+      <h5>Period of Study</h5>
+        <ul><li>June 2015 - May 2019</li></ul>
+        <h5>Honors Coursework</h5>
+        <ul><li>Software Testing, Cyber Forensics, Green Computing, Mobile Computing, Logistics and Supply Chain Management
+        </li></ul>
+        <h5>Elective Coursework</h5>
+        <ul>
+          <li>Machine Learning Techniques, Data Warehousing and Data Mining, Big Data Analytics <br/>
+          </li><li>Database Management Systems, Parallel and Distributed Systems <br/>
+          </li><li>Computer Graphics, Human Computer Interface, Discrete Mathematics (Logic) <br/>
+          </li></ul>
+          <h5>Activities and Memberships</h5>
+        <ul>
+        <li>Handled and advised a group of 20 students as a taching member of the 'Anukul Shiksha' Program, where seniors guide juniors with their goals in academia/industry.
+        </li><li>Facilitated on-campus conferences as a student member of the Computer Society of India (CSI).
+        </li><li>Managed the release of the Cipher CSE Departmental Magazine, 2018-19 Edition.
+        </li><li>Secretary and eventually Chairman of the student's forum at SASTRA, 2018-19.
+        </li><li>Involved in teaching computer Science to underrepresented communities as a member of the National Service Scheme (NSS) of India between 2016-17.
+        </li>
+        </ul>
+      </div>
+
+      <!--***********************************************Publications******************************************************-->
 
       <div id="Publications" class="tabcontent">
         <h3>Publications</h3>
@@ -127,22 +191,24 @@
         </p>
       </div>
 
+      <!--******************************************Projects******************************************************************-->
+
       <div id="Projects" class="tabcontent">
-        <b>Software Engineering Tasks using Large Language Models (LLM)</b>
+        <h5>Software Engineering Tasks using Large Language Models (LLM)</h5>
           <p>This is an academic individual study under Prof. Reyhan</p>
-        <b>Application of Topic Mining to Browser Bookmarks</b>
+        <h5>Application of Topic Mining to Browser Bookmarks</h5>
           <p>This is a CS510 Project</p>
-        <b>Analytics Service for Online Learning Platform</b>
+        <h5>Analytics Service for Online Learning Platform</h5>
           <p>This is an IIT-B internship program</p>
-        <b>Bin-packing Heuristic for Cloud Data Centers(NP-Hard Problem)</b>
+        <h5>Bin-packing Heuristic for Cloud Data Centers(NP-Hard Problem)</h5>
           <p>THis was with Saikishor Jangiti</p>
-        <b>Review Classification for e-Commerce Websites</b>
+        <h5>Review Classification for e-Commerce Websites</h5>
           <p>This was with Pradeepa</p>
-        <b>Preventing DDoS Attacks in Mobile AdHoc Networks (MANETs)</b>
+        <h5>Preventing DDoS Attacks in Mobile AdHoc Networks (MANETs)</h5>
           <p>This was with Thanuja</p>
-        <b>Billing Software for a local retailer</b>
+        <h5>Billing Software for a local retailer</h5>
           <p>Kamala devi, Sushmanth Reddy</p>
-        <b>My First Website - Book Trader Online</b> 
+        <h5>My First Website - Book Trader Online</h5> 
           <p>Chumma</p>
       </div>
 
@@ -152,17 +218,9 @@
         <p></p>
       </div>
 
-      <div id="Contact" class="tabcontent">
-        <h3>Contact Me</h3>
-        <p><a href="https://www.linkedin.com/in/sri-ram-e-cs/" target="_blank" rel="nofollow noreferrer"><img width="170" height="40" src="https://cdn.gifo.wisestamp.com/apps/fixed_button/full/Lets%20connect!/_mc_ffffff,0077B5_mc_/30/10/linkedin-50/left/40,28,340,80.png" alt="App Social Buttons Image"></a>.</p>
-        <p><a href="https://www.facebook.com/sriram.yokesh/" target="_blank" rel="nofollow noreferrer"><img width="170" height="40" src="https://cdn.gifo.wisestamp.com/apps/fixed_button/full/Find%20me%20on%20FB/_mc_ffffff,3E5997_mc_/30/10/facebook-50/left/40,28,340,80.png" alt="App Social Buttons Image"></a></p>
-        <p> You can also email me at <a href="mailto:sriram.esr6@gmail.com" target="_blank" rel="nofollow noreferrer">sriram.esr6@gmail.com</a></p>
-      </div>
-  
   <script>    
   document.getElementById("Default").click();
 </script>
-  
 <!--p align="left">
 <h3>DESCRIPTION</h3>
 </p>
