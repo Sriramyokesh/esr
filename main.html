@@ -59,39 +59,32 @@
 
 <script defer>
     function whichTab(evt, Name) {
-  // Declare all variables
   var i, tabcontent, tablinks;
 
-  // Get all elements with class="tabcontent" and hide them
   tabcontent = document.getElementsByClassName("tabcontent");
   for (i = 0; i < tabcontent.length; i++) {
     tabcontent[i].style.display = "none";
   }
 
-  // Get all elements with class="tablinks" and remove the class "active"
   tablinks = document.getElementsByClassName("tablinks");
   for (i = 0; i < tablinks.length; i++) {
     tablinks[i].className = tablinks[i].className.replace(" active", "");
   }
 
-  // Show the current tab, and add an "active" class to the button that opened the tab
   document.getElementById(Name).style.display = "block";
   evt.currentTarget.className += " active";
   }
 
   function whichImage(evt, Name) {
-  // Declare all variables
   var i, imagecontent;
-
-  // Get all elements with class="tabcontent" and hide them
+  
   imagecontent = document.getElementsByClassName("imagecontent");
   for (i = 0; i < imagecontent.length; i++) {
     imagecontent[i].style.display = "none";
   }
 
-  // Show the current tab, and add an "active" class to the button that opened the tab
+
   document.getElementById(Name).style.display = "block";
-  evt.currentTarget.className += " active";
   }
 
 
@@ -136,7 +129,7 @@
     <img class="imagecontent" id="About_im" style="padding-top:10px" src = "kbkm.jpg" width = 100% height = 100%/>
     <img class="imagecontent" id="Uiuc_im" style="padding-top:10px" src = "kbkm.jpg" width = 100% height = 100%/>
     <img class="imagecontent" id="Infa_im" style="padding-top:10px" src = "kbkm.jpg" width = 100% height = 100%/>
-    <img class="imagecontent" id="Sastra_im" style="padding-top:10px" src = "poom.jpg" width = 100% height = 100%/>
+    <img class="imagecontent" id="Sastra_im" style="padding-top:10px" src = "kbkm.jpg" width = 100% height = 100%/>
     <img class="imagecontent" id="Proj_im" style="padding-top:10px" src = "kbkm.jpg" width = 100% height = 100%/>
     <img class="imagecontent" id="Pub_im" style="padding-top:10px" src = "kbkm.jpg" width = 100% height = 100%/>
     <img class="imagecontent" id="App_im" style="padding-top:10px" src = "kbkm.jpg" width = 100% height = 100%/>
